@@ -1,16 +1,13 @@
 import logo from "./logo.svg";
 import React from "react";
 import "./App.css";
+import TaskList from "./Components/TaskList/TaskList";
 
 const App = () => {
   return (
     <div className="course-tasks">
       <h2>Task List</h2>
-      <ul className="task-list">
-        <li>Attend COMP 229 Class</li>
-        <li>Complete Assignment</li>
-        <li>Play Video Game</li>
-      </ul>
+      <TaskList />
     </div>
   );
 };
