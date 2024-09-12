@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import React from "react";
 import "./App.css";
 import TaskList from "./Components/TaskList/TaskList";
+import NewTask from "./Components/NewTask/NewTask";
 
 const App = () => {
 
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <div className="course-tasks">
       <h2>Task List</h2>
-      {/* tasks props holds the array reference  */}
+      <NewTask />
       <TaskList tasks={courseTasks}/>
     </div>
   );
