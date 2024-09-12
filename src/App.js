@@ -4,10 +4,19 @@ import "./App.css";
 import TaskList from "./Components/TaskList/TaskList";
 
 const App = () => {
+
+  const courseTasks = [
+    {id:"task1", text: "Attend Course COMP229"},
+    {id:"task2", text: "Complete the assignment"},
+    {id:"task3", text: "Play Video Game"},
+    {id:"task4", text: "Create React Project"},
+  ];
+
   return (
     <div className="course-tasks">
       <h2>Task List</h2>
-      <TaskList />
+      {/* tasks props holds the array reference  */}
+      <TaskList tasks={courseTasks}/>
     </div>
   );
 };
