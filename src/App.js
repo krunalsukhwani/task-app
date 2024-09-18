@@ -26,6 +26,8 @@ const App = () => {
     <div className="course-tasks">
       <h2>Task List</h2>
       <NewTask onAddTask={addNewTaskHandler}/>
+
+      {/* transferring data from App component to TaskList componet using props (tasks) */}
       <TaskList tasks={courseTasks}/>
     </div>
   );
