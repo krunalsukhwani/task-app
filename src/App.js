@@ -12,10 +12,16 @@ const App = () => {
     {id:"task4", text: "Create React Project"},
   ];
 
+  //handler to receive task from NewTask
+  const addNewTaskHandler = (newTask) => {
+    courseTasks.push(newTask);
+    console.log(courseTasks);
+  };
+
   return (
     <div className="course-tasks">
       <h2>Task List</h2>
-      <NewTask />
+      <NewTask onAddTask={addNewTaskHandler}/>
       <TaskList tasks={courseTasks}/>
     </div>
   );
