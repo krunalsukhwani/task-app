@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import TaskList from "./Components/TaskList/TaskList";
 import NewTask from "./Components/NewTask/NewTask";
 
 const App = () => {
 
-  const courseTasks = [
-    {id:"task1", text: "Attend Course COMP229"},
-    {id:"task2", text: "Complete the assignment"},
-    {id:"task3", text: "Play Video Game"},
-    {id:"task4", text: "Create React Project"},
-  ];
+  //courseTasks: old data
+  //setCourseTasks: new data
+  const [courseTasks, setCourseTasks] = useState(
+    [
+      {id:"task1", text: "Attend Course COMP229"},
+      {id:"task2", text: "Complete the assignment"},
+      {id:"task3", text: "Play Video Game"},
+      {id:"task4", text: "Create React Project"},
+    ]);
 
   //handler to receive task from NewTask
   const addNewTaskHandler = (newTask) => {
-    courseTasks.push(newTask);
-    console.log(courseTasks);
+    setCourseTasks((prevCourseTasks) => {
+      return prevCourseTasks.concat(newTask);
+    });
   };
 
   return (
